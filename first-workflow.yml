@@ -1,0 +1,22 @@
+name: My First GitHub Action
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+env:
+  NAME: Ganesh
+  ROLE: Junior DevOps Engineer
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Welcome Message
+        run: echo "Hello $NAME!"
+
+      - name: Display Role
+        run: echo "Welcome to $ROLE training."
